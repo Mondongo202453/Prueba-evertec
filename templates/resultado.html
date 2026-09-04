@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resultado del pago</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main>
+        <section class="product-card">
+            <h1>Resultado de tu pago</h1>
+
+            <p><strong>Estado del pago:</strong>
+                {{ estado.get("status", "No disponible") }}
+            </p>
+
+            <p><strong>Mensaje de Placetopay:</strong>
+                {{ estado.get("message", "No se recibió un mensaje") }}
+            </p>
+
+            <p><strong>Motivo de la respuesta:</strong>
+                {{ estado.get("reason", "No se recibió un código") }}
+            </p>
+
+            <p><strong>Identificador de la transacción:</strong>
+                {{ request_id }}
+            </p>
+
+            <p>Esta información corresponde a la respuesta recibida desde Placetopay.</p>
+
+            <a class="button" href="/">Volver a la tienda</a>
+        </section>
+    </main>
+</body>
+</html>

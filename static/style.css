@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #263238;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 24px 8%;
+    border-bottom: 1px solid #dfe3e6;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    color: #163a5f;
+}
+
+header p {
+    margin: 0;
+    color: #65727a;
+}
+
+main {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.product-card,
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card {
+    max-width: 500px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #167c80;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background-color: #167c80;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #105d60;
+}
+
+form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd3d8;
+    border-radius: 5px;
+    font-size: 15px;
+}

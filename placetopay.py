@@ -25,7 +25,15 @@ def crear_auth(login, secret_key):
         "seed": seed
     }
     
-def crear_sesion(login, secret_key, base_url, payment, buyer, return_url):
+def crear_sesion(
+    login,
+    secret_key,
+    base_url,
+    payment,
+    buyer,
+    return_url,
+    notification_url=None
+):
     payload = {
         "auth": crear_auth(login, secret_key),
         "payment": payment,
@@ -34,6 +42,9 @@ def crear_sesion(login, secret_key, base_url, payment, buyer, return_url):
         "ipAddress": "127.0.0.1",
         "userAgent": "Tienda-Placetopay/1.0"
     }
+
+    if notification_url:
+        payload["notificationUrl"] = notification_url
     
     response = requests.post(
         f"{base_url.rstrip('/')}/api/session",

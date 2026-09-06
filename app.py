@@ -17,10 +17,12 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "clave-local-de-prueba")
 def add_security_headers(response):
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
-        "script-src 'self' https://checkout.placetopay.com https://*.placetopay.com; "
+        "script-src 'self' https://checkout-test.placetopay.com https://*.placetopay.com; "
+        "style-src 'self' 'unsafe-inline'; "
         "connect-src 'self' https://checkout-test.placetopay.com https://*.placetopay.com; "
         "img-src 'self' data: https://*.placetopay.com; "
-        "frame-src https://*.placetopay.com;"
+        "frame-src https://checkout-test.placetopay.com https://*.placetopay.com; "
+        "child-src https://checkout-test.placetopay.com https://*.placetopay.com;"
     )
     return response
 
